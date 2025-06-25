@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Md. Mohiuddin Roni - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary: #2d3e50;
+            --secondary: #00bfae;
+            --background: #f4f7fa;
+            --white: #fff;
+            --accent: #f9a825;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--background);
+            color: var(--primary);
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 10px 30px 10px;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--secondary);
+        }
+        section {
+            max-width: 700px;
+            margin: 40px auto;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 30px 20px;
+        }
+        h2 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .contact-info a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        @media (max-width: 600px) {
+            section {
+                margin: 20px 5px;
+                padding: 18px 7px;
+            }
+            nav {
+                gap: 12px;
+                font-size: 15px;
+            }
+            header {
+                padding: 30px 5px 20px 5px;
+            }
+        }
+    </style>
+    <script>
+        // Smooth scroll for navigation
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 60,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="picture.jpg" alt="Md. Mohiuddin Roni" class="profile-pic">
+        <h1>Md. Mohiuddin Roni</h1>
+        <p>IT Support Technician | Network & Hardware Specialist</p>
+        <div class="links">
+            <a href="https://roni450.github.io/" target="_blank">Portfolio</a>
+            <a href="https://roni450.github.io/Brake/" target="_blank">Brake Project</a>
+        </div>
+    </header>
+    <nav>
+        <a href="#about">Home</a>
+        <a href="#skills">Key Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Motivated and experienced IT Support Technician with over 10 years of expertise in network setup, router configuration, hardware diagnostics, and client support. Proven ability to deliver technical solutions, manage IT systems, and provide excellent customer service. Seeking an IT Support & Helpdesk position in Australia under the TSS Visa (Subclass 482) with employer sponsorship.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Key Skills</h2>
+        <ul>
+            <li>Network Setup (LAN/WAN)</li>
+            <li>Cisco Router & Switch Configuration</li>
+            <li>Hardware Troubleshooting</li>
+            <li>WiMAX Signal Testing</li>
+            <li>Windows Installation & Maintenance</li>
+            <li>Microsoft Intune</li>
+            <li>Freshdesk, ServiceNow, Slack</li>
+            <li>Zapier Automation</li>
+            <li>Microsoft Office (Excel, Word, Outlook)</li>
+            <li>Strong communication and problem-solving skills</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>B.Sc. in Electronics & Telecommunication</strong><br>
+                University of Liberal Arts Bangladesh (ULAB), 2011 (CGPA: 2.33)
+            </li>
+            <li>
+                <strong>HSC</strong><br>
+                Rajshahi Govt. City College, 2006 (CGPA: 3.00)
+            </li>
+            <li>
+                <strong>SSC</strong><br>
+                Seroil Govt. High School, 2004 (CGPA: 3.44)
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:mohiuddinroni@gmail.com">mohiuddinroni@gmail.com</a></p>
+            <p>Phone: <a href="tel:+8801717450678">+8801717450678</a></p>
+            <p>Location: Rajshahi, Bangladesh</p>
+            <p>Portfolio: <a href="https://roni450.github.io/" target="_blank">https://roni450.github.io/</a></p>
+            <p>Brake Project: <a href="https://roni450.github.io/Brake/" target="_blank">https://roni450.github.io/Brake/</a></p>
+        </div>
+    </section>
+</body>
+</html>
